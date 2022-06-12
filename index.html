@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/passwordGenerator.js"></script>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <div class="container">
+        <form action="">
+            <div class="option">
+                <label for="passwordLength">Password length</label>
+                <input type="number" id="passwordLength" class="passwordLength" name="passwordLength" min="4" max="2048"/>
+                <span id="lengthTip"> </span>
+            </div>
+            <div class="option">
+                <label>Use numbers</label>
+                <input type="checkbox" id="useNumbers" name="useNumbers" />
+                <label for="useNumbers">(e.g. 1234)</label>
+            </div>
+            <div class="option">
+                <label>Use lowercase letters</label>
+                <input type="checkbox" id="useLowercase" name="useLowercase">
+                <label for="useLowercase">(e.g. abcdef)</label>
+            </div>
+            <div class="option">
+                <label>Use uppercase letters</label>
+                <input type="checkbox" id="useUppercase" name="useUppercase">
+                <label for="useUppercase">(e.g. ABCDEF)</label>
+            </div>
+            <div class="option">
+                <label>Use symbols</label>
+                <input type="checkbox" id="useSymbols" name="useSymbols">
+                <label for="useSymbols">(e.g. @#$%&?) </label>
+            </div>
+            <div class="option">
+                <label>WIP: Disable similar characters</label>
+                <input type="checkbox" id="disableSimilar" name="disableSimilar">
+                <label for="disableSimilar">(e.g. i, l, I, 1, o, O, 0)</label>
+            </div>
+            <br>
+            <button class="button" type="button" onclick="generatePassword()">Generate password</button>
+            <button class="button" type="button" onclick="clipboardCopy()">Copy to Clipboard</button>
+            <div class="option">
+                <label>Password: </label>
+                <input type="text" id="generatedPassword" class="generatedPassword" name="generatedPassword">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
