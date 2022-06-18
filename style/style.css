@@ -44,19 +44,39 @@ h1 {
     display: inline-block;
 }
 
-.passwordLength {
-    width: 4rem;
+.passwordDiv {
+    display: flex;
+    align-items: center;
 }
 
 input {
+    height: 1.15rem;
     background-color: var(--text-main);
 
     border: none;
     border-radius: 3px;
+    padding: 2px;
 
     color: var(--background-main);
 }
 
+.generatedPassword::-webkit-scrollbar {
+    display: none;
+  }
+
+.generatedPassword {
+    display: inline-block;
+    max-width: 150px;
+    overflow-x: auto;
+    -ms-overflow-style: none;  
+    /* scrollbar-width: none;   */
+    
+    white-space: nowrap;
+}
+
+input[type=number] {
+    width: 4rem;
+}
 
 .button {
     background-color: var(--background-third);
@@ -73,4 +93,20 @@ input {
 .button:hover {
     background-color: var(--accent);
     cursor: pointer;
+}
+
+.red {
+    color: #ff5555;
+}
+
+.blue {
+    color: #4682b4;
+}
+
+.green {
+    color: #50FA7B;
+}
+
+.orange {
+    color: #FFB86C;
 }
